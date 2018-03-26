@@ -1,0 +1,37 @@
+{
+  "name": "brain-games-klimonov",
+  "version": "1.0.0",
+  "description": "My first project",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "babel-node": "babel-node",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "eslint": "eslint",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Klimonov/project-lvl1-s244.git"
+  },
+  "author": "Klimonov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Klimonov/project-lvl1-s244/issues"
+  },
+  "homepage": "https://github.com/Klimonov/project-lvl1-s244#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
