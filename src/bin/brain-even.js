@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-import { sayHelloName, sayWelcome } from '..';
+import { sayWelcomeAndHelloName, gameIsNumberEven } from '..';
 
-sayWelcome();
-sayHelloName();
+// greeting user
+sayWelcomeAndHelloName();
+
+// game. ask user is number even
+gameIsNumberEven();

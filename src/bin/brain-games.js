@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { sayHelloName, sayWelcome } from '..';
+import { sayWelcomeAndHelloName } from '..';
 
-sayWelcome();
-sayHelloName();
+sayWelcomeAndHelloName();
