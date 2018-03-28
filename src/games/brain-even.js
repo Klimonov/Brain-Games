@@ -3,7 +3,7 @@
 import { sayWelcomeAndHelloName, gameIsNumberEven } from '..';
 
 // greeting user
-sayWelcomeAndHelloName();
+sayWelcomeAndHelloName('Answer "yes" if number even otherwise answer "no".');
 
 // game. ask user is number even
 gameIsNumberEven();
