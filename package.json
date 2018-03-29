@@ -1,12 +1,12 @@
 {
   "name": "brain-games-klimonov",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "My first project",
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/games/brain-even.js",
-    "brain-calc": "dist/games/brain-calc.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "files": [
     "dist"

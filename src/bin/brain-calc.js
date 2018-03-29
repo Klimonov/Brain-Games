@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
-import { sayWelcomeAndHelloName, gameCalculator } from '..';
+import { sayWelcomeAndHelloName } from '..';
+import gameCalc from '../games/calc';
 
 // greeting user
 sayWelcomeAndHelloName('What is the result of the expression?');
 
 // game. calculator
-gameCalculator();
+gameCalc();
