@@ -10,9 +10,7 @@ export const sayWelcomeAndHelloName = (termsOfTheGame) => {
   userName = question('May I have your name ? ');
   console.log(`Hello, ${userName}!`);
 };
-export const nameForExport = userName;
-
-export const wrongAnswer = (userAnswer, corectAnswer, name) => console.log(`\n'${userAnswer}' is wrong answer ;(. Corect answer was '${corectAnswer}'.\nLet's try again, ${name}!`);
+export const wrongAnswer = (userAnswer, corectAnswer) => console.log(`\n'${userAnswer}' is wrong answer ;(. Corect answer was '${corectAnswer}'.\nLet's try again, ${userName}!`);
 export const correct = () => console.log('Correct!');
 export const grac = () => console.log(`\nCongratulations, ${userName}!`);
 

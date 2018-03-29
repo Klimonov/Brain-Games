@@ -1,4 +1,4 @@
-import { wrongAnswer, correct, grac, randomNumber, question, nameForExport } from '..';
+import { wrongAnswer, correct, grac, randomNumber, question } from '..';
 
 // game. ask user is number even
 const gameIsNumberEven = () => {
@@ -12,7 +12,7 @@ const gameIsNumberEven = () => {
     if ((isEven && userAnswer === yes) || (!isEven && userAnswer === no)) {
       correct();
     } else {
-      return wrongAnswer(userAnswer, isEven ? yes : no, nameForExport);
+      return wrongAnswer(userAnswer, isEven ? yes : no);
     }
   }
   return grac();

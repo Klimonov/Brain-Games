@@ -1,4 +1,4 @@
-import { wrongAnswer, correct, grac, randomNumber, question, nameForExport } from '..';
+import { wrongAnswer, correct, grac, randomNumber, question } from '..';
 
 // game. calculator
 const gameCalculator = () => {
@@ -26,7 +26,7 @@ const gameCalculator = () => {
     if (String(result) === userAnswer) {
       correct();
     } else {
-      return wrongAnswer(userAnswer, result, nameForExport);
+      return wrongAnswer(userAnswer, result);
     }
   }
   return grac();
