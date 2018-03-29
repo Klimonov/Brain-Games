@@ -1,21 +1,9 @@
-import { wrongAnswer, correct, grac, randomNumber, question } from '..';
+import game from '..';
 
 // game. ask user is number even
-const gameIsNumberEven = () => {
-  const yes = 'yes';
-  const no = 'no';
-  for (let counter = 0; counter < 3; counter += 1) {
-    const randomNumberForGameEven = randomNumber(100);
-    console.log(`\nQuestion: ${randomNumberForGameEven}`);
-    const userAnswer = question('Your answer: ');
-    const isEven = randomNumberForGameEven % 2 === 0;
-    if ((isEven && userAnswer === yes) || (!isEven && userAnswer === no)) {
-      correct();
-    } else {
-      return wrongAnswer(userAnswer, isEven ? yes : no);
-    }
-  }
-  return grac();
+const termsOfTheGame = 'Answer "yes" if number even otherwise answer "no".';
+const foo = randomNumbers => randomNumbers[0];
+const correctAnswer = num => (num % 2 === 0 ? 'yes' : 'no');
+export default () => {
+  game(foo, termsOfTheGame, correctAnswer);
 };
-
-export default gameIsNumberEven;
