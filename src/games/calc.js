@@ -1,12 +1,11 @@
-import { game } from '..';
+import game from '..';
 
-// game. ask user is number even
 const termsOfTheGame = 'What is the result of the expression?';
 
-const correctAnswer = (massive) => {
-  const first = massive[0];
-  const second = massive[1];
-  const numberForOperator = massive[2];
+const findCorrectAnswer = (randomNumbers) => {
+  const first = randomNumbers[0];
+  const second = randomNumbers[1];
+  const numberForOperator = randomNumbers[2];
   if (numberForOperator === 1) {
     return first - second;
   } else if (numberForOperator === 2) {
@@ -15,18 +14,18 @@ const correctAnswer = (massive) => {
   return first * second;
 };
 
-const foo = (massive) => {
-  const numberForOperator = massive[2];
-  const operator = op => console.log(`\nQuestion: ${massive[0]} ${op} ${massive[1]}`);
+const makeQuestion = (randomNumbers) => {
+  const numberForOperator = randomNumbers[2];
+  const makeQuestionOperator = operator => randomNumbers[0] + operator + randomNumbers[1];
 
   if (numberForOperator === 1) {
-    return operator('-');
+    return makeQuestionOperator(' - ');
   } else if (numberForOperator === 2) {
-    return operator('+');
+    return makeQuestionOperator(' + ');
   }
-  return operator('*');
+  return makeQuestionOperator(' * ');
 };
 
 export default () => {
-  game(foo, termsOfTheGame, correctAnswer);
+  game(makeQuestion, termsOfTheGame, findCorrectAnswer);
 };
