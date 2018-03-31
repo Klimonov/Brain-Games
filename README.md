@@ -5,32 +5,32 @@
 ## Setup
 ```sh
 $ npm install brain-games-klimonov
-```
+```  
 ## Run
 Answer "yes" if number even otherwise answer "no".
 ```sh
 $ brain-even
-```
+```  
 
 What is the result of the expression?
 ```sh
 $ brain-calc
-```
+```  
 
 Find the greatest common divisor of given numbers.
 ```sh
 $ brain-gcd
-```
+```  
 
 Balance the given number.
 ```sh
 $ brain-balance
-```
+```  
 
 What number is missing in this progression?
 ```sh
 $ brain-progression
-```
+```  
 
 Is this number prime?
 ```sh
