@@ -1,31 +1,28 @@
-import game from '..';
+import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'What is the result of the expression?';
 
-const findCorrectAnswer = (randomNumbers) => {
-  const first = randomNumbers[0];
-  const second = randomNumbers[1];
-  const numberForOperator = randomNumbers[2];
+const findCorrectAnswer = () => {
+  const first = getRandomNumber(100);
+  const second = getRandomNumber(100);
+  const numberForOperator = getRandomNumber(3);
+  const makeQuestionOperator = operator => `${first} ${operator} ${second}`;
+  let termForQuestion;
+  let correctAnswer;
   if (numberForOperator === 1) {
-    return first - second;
+    termForQuestion = makeQuestionOperator('-');
+    correctAnswer = first - second;
+    return [correctAnswer, termForQuestion];
   } else if (numberForOperator === 2) {
-    return first + second;
+    termForQuestion = makeQuestionOperator('+');
+    correctAnswer = first + second;
+    return [correctAnswer, termForQuestion];
   }
-  return first * second;
-};
-
-const makeQuestion = (randomNumbers) => {
-  const numberForOperator = randomNumbers[2];
-  const makeQuestionOperator = operator => randomNumbers[0] + operator + randomNumbers[1];
-
-  if (numberForOperator === 1) {
-    return makeQuestionOperator(' - ');
-  } else if (numberForOperator === 2) {
-    return makeQuestionOperator(' + ');
-  }
-  return makeQuestionOperator(' * ');
+  termForQuestion = makeQuestionOperator('*');
+  correctAnswer = first * second;
+  return [correctAnswer, termForQuestion];
 };
 
 export default () => {
-  game(makeQuestion, termsOfTheGame, findCorrectAnswer);
+  game(termsOfTheGame, findCorrectAnswer);
 };

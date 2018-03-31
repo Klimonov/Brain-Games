@@ -1,11 +1,14 @@
-import game from '..';
+import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'Answer "yes" if number even otherwise answer "no".';
 
-const makeQuestion = randomNumbers => randomNumbers[0];
-
-const findCorrectAnswer = randomNumbers => (randomNumbers[0] % 2 === 0 ? 'yes' : 'no');
+const findCorrectAnswer = () => {
+  const randomNumber = getRandomNumber(100);
+  // console.log(`\nQuestion: ${randomNumber}`);
+  const correctAnswer = (randomNumber % 2 === 0 ? 'yes' : 'no');
+  return [correctAnswer, randomNumber];
+};
 
 export default () => {
-  game(makeQuestion, termsOfTheGame, findCorrectAnswer);
+  game(termsOfTheGame, findCorrectAnswer);
 };
