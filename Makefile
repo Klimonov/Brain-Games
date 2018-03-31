@@ -1,5 +1,5 @@
 install:
-	npm install
+	sudo npm install -g brain-games-klimonov
 starteven:
 	npm run babel-node -- 'src/bin/brain-even.js'
 startcalc:
@@ -8,6 +8,8 @@ startgcd:
 	npm run babel-node -- 'src/bin/brain-gcd.js'
 startbalance:
 	npm run babel-node -- 'src/bin/brain-balance.js'
+startprogression:
+	npm run babel-node -- 'src/bin/brain-progression.js'
 publish:
 	npm publish
 lint:
