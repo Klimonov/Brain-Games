@@ -11,25 +11,25 @@ $ npm install brain-games-klimonov
 ## Run
 Answer "yes" if number even otherwise answer "no".
 ```sh
-$ brain-even\s\s
+$ brain-even
 ```
-What is the result of the expression?
+\s\sWhat is the result of the expression?
 ```sh
-$ brain-calc\s\s
+$ brain-calc
 ```
-Find the greatest common divisor of given numbers
+\s\sFind the greatest common divisor of given numbers
 ```sh
-$ brain-gcd\s\s
+$ brain-gcd
 ```
-Balance the given number.
+\s\sBalance the given number.
 ```sh
-$ brain-balance\s\s
+$ brain-balance
 ```
-What number is missing in this progression?
+\s\sWhat number is missing in this progression?
 ```sh
-$ brain-progression\s\s
+$ brain-progression
 ```
-Is this number prime?
+\s\sIs this number prime?
 ```sh
-$ brain-prime\s\s
+$ brain-prime
 ```
