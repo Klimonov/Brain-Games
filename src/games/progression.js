@@ -1,6 +1,6 @@
 import { game, getRandomNumber } from '..';
 
-const termsOfTheGame = 'Find the greatest common divisor of given numbers.';
+const termsOfTheGame = 'What number is missing in this progression?';
 
 const findCorrectAnswer = () => {
   const randomNumber = getRandomNumber(100);
