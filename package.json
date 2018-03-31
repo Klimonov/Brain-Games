@@ -1,6 +1,6 @@
 {
   "name": "brain-games-klimonov",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "My first project",
   "main": "index.js",
   "bin": {
