@@ -2,7 +2,7 @@ import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'What is the result of the expression?';
 
-const findCorrectAnswer = () => {
+const findCorrectAnswerAndQuestion = () => {
   const first = getRandomNumber(100);
   const second = getRandomNumber(100);
   const numberForOperator = getRandomNumber(3);
@@ -24,5 +24,5 @@ const findCorrectAnswer = () => {
 };
 
 export default () => {
-  game(termsOfTheGame, findCorrectAnswer);
+  game(termsOfTheGame, findCorrectAnswerAndQuestion);
 };

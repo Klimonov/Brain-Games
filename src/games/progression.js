@@ -2,7 +2,7 @@ import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'What number is missing in this progression?';
 
-const findCorrectAnswer = () => {
+const findCorrectAnswerAndQuestion = () => {
   const randomNumber = getRandomNumber(100);
   const step = getRandomNumber(100);
   const dots = getRandomNumber(10);
@@ -22,5 +22,5 @@ const findCorrectAnswer = () => {
 };
 
 export default () => {
-  game(termsOfTheGame, findCorrectAnswer);
+  game(termsOfTheGame, findCorrectAnswerAndQuestion);
 };

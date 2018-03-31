@@ -2,7 +2,7 @@ import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'Balance the given number.';
 
-const findCorrectAnswer = () => {
+const findCorrectAnswerAndQuestion = () => {
   const randomNumber = getRandomNumber(10000);
   const stringNumber = String(randomNumber);
   const lengthOfNumber = stringNumber.length;
@@ -32,5 +32,5 @@ const findCorrectAnswer = () => {
 
 
 export default () => {
-  game(termsOfTheGame, findCorrectAnswer);
+  game(termsOfTheGame, findCorrectAnswerAndQuestion);
 };

@@ -4,12 +4,12 @@ const readLineQuestion = str => readlineSync.question(str);
 
 export const getRandomNumber = max => Math.floor(Math.random() * Math.floor(max)) + 1;
 
-export const game = (termsOfTheGame, findCorrectAnswer) => {
+export const game = (termsOfTheGame, findCorrectAnswerAndQuestion) => {
   console.log(`Welcome to the Brain Games!\n${termsOfTheGame}\n`);
   const userName = readLineQuestion('May I have your name ? ');
   console.log(`Hello, ${userName}!`);
   for (let counter = 0; counter < 3; counter += 1) {
-    const [correctAnswer, termForQuestion] = findCorrectAnswer();
+    const [correctAnswer, termForQuestion] = findCorrectAnswerAndQuestion();
     console.log(`\nQuestion: ${termForQuestion}`);
     const userAnswer = readLineQuestion('Your answer: ');
     if (userAnswer === String(correctAnswer)) {
