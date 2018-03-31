@@ -2,23 +2,26 @@ import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'What number is missing in this progression?';
 
+
+const mathProgression = (randomNumber, skipedNumber, step) =>
+  randomNumber + (skipedNumber * step);
+
 const findCorrectAnswerAndQuestion = () => {
   const randomNumber = getRandomNumber(100);
   const step = getRandomNumber(100);
-  const dots = getRandomNumber(10);
-  let question = randomNumber;
-  let result = '';
-  let answer;
+  const skipedNumber = getRandomNumber(10);
+  let numberForTerm = randomNumber;
+  let termForQuestion = '';
+  const correctAnswer = mathProgression(randomNumber, skipedNumber, step);
   for (let counter = 1; counter < 11; counter += 1) {
-    question += step;
-    if (counter === dots) {
-      result += '.. ';
-      answer = question;
+    numberForTerm += step;
+    if (skipedNumber === counter) {
+      termForQuestion += '.. ';
     } else {
-      result += `${question} `;
+      termForQuestion += `${numberForTerm} `;
     }
   }
-  return [answer, result];
+  return [correctAnswer, termForQuestion];
 };
 
 export default () => {
