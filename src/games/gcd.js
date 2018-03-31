@@ -2,20 +2,20 @@ import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'Find the greatest common divisor of given numbers.';
 
-const findCorrectAnswer = () => {
+
+const gcd = (first, second) => {
+  if (second === 0) return first;
+  return gcd(second, first % second);
+};
+
+const findCorrectAnswerAndQuestion = () => {
   const first = getRandomNumber(100);
   const second = getRandomNumber(100);
-  const startCounter = first > second ? second : first;
   const termForQuestion = `${first} ${second}`;
-  const iterForFindCorrectAnswer = (a, b, counter) => {
-    if (a % counter === 0 && b % counter === 0) {
-      return [counter, termForQuestion];
-    }
-    return iterForFindCorrectAnswer(a, b, counter - 1);
-  };
-  return iterForFindCorrectAnswer(first, second, startCounter);
+  const correctAnswer = gcd(first, second);
+  return [correctAnswer, termForQuestion];
 };
 
 export default () => {
-  game(termsOfTheGame, findCorrectAnswer);
+  game(termsOfTheGame, findCorrectAnswerAndQuestion);
 };
