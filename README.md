@@ -7,6 +7,7 @@
 $ npm install brain-games-klimonov
 ```  
 <br>
+
 ## Run
 Answer "yes" if number even otherwise answer "no".
 ```sh
