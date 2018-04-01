@@ -2,31 +2,30 @@ import { game, getRandomNumber } from '..';
 
 const termsOfTheGame = 'Balance the given number.';
 
+const findCorrectAnswer = (arrayNumber, length) => {
+  const firstNumber = Number(arrayNumber[0]);
+  const lastNumber = Number(arrayNumber[length - 1]);
+  if (lastNumber - firstNumber > 1) {
+    const arrayForChange = arrayNumber;
+    arrayForChange[0] += 1;
+    arrayForChange[length - 1] -= 1;
+    return findCorrectAnswer(arrayForChange);
+  }
+  return arrayNumber.join('');
+};
+
 const findCorrectAnswerAndQuestion = () => {
   const randomNumber = getRandomNumber(10000);
   const stringNumber = String(randomNumber);
   const lengthOfNumber = stringNumber.length;
 
-  // the sum of all the numerals of a random number
-  let sumOfNumeral = 0;
+  const numberToArray = [];
   for (let counter = 0; counter < lengthOfNumber; counter += 1) {
-    sumOfNumeral += Number(stringNumber[counter]);
+    numberToArray.push(Number(stringNumber[counter]));
   }
+  const sortedArrayNumber = numberToArray.sort();
 
-  // make a number from basic numeral
-  const basicNumeral = Math.floor(sumOfNumeral / lengthOfNumber);
-  let numberOfBasicNumeral = '';
-  for (let counter = 0; counter < lengthOfNumber; counter += 1) {
-    numberOfBasicNumeral += basicNumeral;
-  }
-
-  // find how many Ones need to sum with the base numerals to get the correct answer
-  let onesForSum = '';
-  const amountOfOnes = sumOfNumeral % lengthOfNumber;
-  for (let counter = 0; counter < amountOfOnes; counter += 1) {
-    onesForSum += 1;
-  }
-  const correctAnswer = Number(numberOfBasicNumeral) + Number(onesForSum);
+  const correctAnswer = findCorrectAnswer(sortedArrayNumber, lengthOfNumber);
   return [correctAnswer, randomNumber];
 };
 
