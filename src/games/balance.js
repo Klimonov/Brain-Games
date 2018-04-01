@@ -9,7 +9,7 @@ const findCorrectAnswer = (arrayNumber, length) => {
     const arrayForChange = arrayNumber;
     arrayForChange[0] += 1;
     arrayForChange[length - 1] -= 1;
-    return findCorrectAnswer(arrayForChange);
+    return findCorrectAnswer(arrayForChange.sort(), length);
   }
   return arrayNumber.join('');
 };
