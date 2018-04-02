@@ -1,5 +1,5 @@
 # Brain Games
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+<a href="https://codeclimate.com/github/Klimonov/Brain-Games/maintainability"><img src="https://api.codeclimate.com/v1/badges/32378b62e82cfe66d3e7/maintainability" /></a>
 [![Build Status](https://travis-ci.org/Klimonov/Brain-Games.svg?branch=master)](https://travis-ci.org/Klimonov/Brain-Games)
 
 ## Setup
